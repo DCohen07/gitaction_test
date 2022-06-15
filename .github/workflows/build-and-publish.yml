@@ -21,4 +21,8 @@ jobs:
         with:
           reporter: 'github-pr-review'
         env:
+<<<<<<< HEAD
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+=======
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> 495968e198753e445f8105e81439484dd3989c37

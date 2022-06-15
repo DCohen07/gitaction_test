@@ -6,6 +6,7 @@ jobs:
     name: Check tests
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@master
         with:

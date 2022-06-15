@@ -1,6 +1,4 @@
 import pytest
-
-import mathlib
  
 def test_calc_addition():
     "Verify the output of 'calc_addition' function"

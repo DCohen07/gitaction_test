@@ -12,8 +12,7 @@ jobs:
         with:
           python-version: '3.x'
       - name: Run Tests
-        run:
-          pip install pytest
-          pytest
+        run: pip install pytest
+        run: pytest
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

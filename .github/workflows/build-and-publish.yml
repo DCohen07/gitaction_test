@@ -6,7 +6,6 @@ jobs:
     name: Check tests
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v1
       - name: Set up Python
         uses: actions/setup-python@master
         with:
@@ -14,6 +13,6 @@ jobs:
       - name: Run Tests
         run:
           pip install pytest
-          pytest
+          pytest .
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -44,10 +44,10 @@ jobs:
           context: .
           # Note: tags has to be all lower-case
           tags: |
-            dcohen/eventsourcing.nodejs.simple:latest 
-            ghcr.io/dcohen/eventsourcing.nodejs/simple:latest
+            dcohen:latest 
+            ghcr.io/dcohen/simple:latest
           # build on feature branches, push only on main branch
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'main' }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

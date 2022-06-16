@@ -3,10 +3,11 @@ on: [push]
 jobs:
 
   qa:
+  
     name: Check tests
     runs-on: ubuntu-20.04
     steps:
-      
+      - uses: actions/checkout@v3
       - name: Set up Python@V1
         uses: actions/setup-python@master
         with:
@@ -16,7 +17,7 @@ jobs:
           pip install pytest
       - name: run tests  
         run: |
-          python -m pytest --import-mode=append
+          pytest
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 

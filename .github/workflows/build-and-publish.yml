@@ -16,7 +16,7 @@ jobs:
           pip install pytest
       - name: run tests  
         run: |
-          python -m pytest
+          python -m pytest --import-mode=append
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 

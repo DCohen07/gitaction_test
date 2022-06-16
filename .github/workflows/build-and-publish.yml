@@ -11,9 +11,11 @@ jobs:
         uses: actions/setup-python@master
         with:
           python-version: '3.x'
-      - name: Run Tests
+      - name: Install pytest
         run: |
           pip install pytest
-          pytest test_file.py
+      - name: run tests  
+        run: |
+          pytest
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

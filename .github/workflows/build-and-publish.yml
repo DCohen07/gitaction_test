@@ -3,10 +3,11 @@ on: [push]
 jobs:
 
   qa:
+  
     name: Check tests
     runs-on: ubuntu-20.04
     steps:
-      
+      - uses: actions/checkout@v3
       - name: Set up Python@V1
         uses: actions/setup-python@master
         with:

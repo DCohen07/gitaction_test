@@ -18,7 +18,6 @@ jobs:
       - name: run tests  
         run: |
           pytest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        
 
 

@@ -25,4 +25,5 @@ jobs:
         uses: suo/flake8-github-action@releases/v1
         with:
           checkName: 'qa'
-        
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

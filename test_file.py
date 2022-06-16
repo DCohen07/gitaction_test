@@ -14,3 +14,7 @@ def test_calc_multiply():
     "Verify the output of `calc_multiply` function"
     output = 2*4
     assert output == 8
+
+def test_coucou():
+    output='coucou'
+    assert output == 'coucou'

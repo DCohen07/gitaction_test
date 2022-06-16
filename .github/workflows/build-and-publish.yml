@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       
-      - name: Set up Python
+      - name: Set up Python@V1
         uses: actions/setup-python@master
         with:
           python-version: '3.x'
       - name: Run Tests
         run:
           pip install pytest
-          python -m pytest -vv --cov=le_script.py
+          python pytest -vv --cov=le_script.py
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

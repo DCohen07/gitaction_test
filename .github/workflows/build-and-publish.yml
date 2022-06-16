@@ -16,7 +16,7 @@ jobs:
           pip install pytest
       - name: run tests  
         run: |
-          ls
+          python -m pytest
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 

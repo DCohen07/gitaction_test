@@ -12,8 +12,8 @@ jobs:
         with:
           python-version: '3.x'
       - name: Run Tests
-        run:
+        run: |
           pip install pytest
-          python pytest -vv --cov=test_file.py
+          pytest
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -28,6 +28,6 @@ jobs:
       - name: Run flake8
         uses: py-actions/flake8@v2
         
-      - name: ls
-        run: ls -a
+      - name: log test
+        run: pytest --log-format="%(asctime)s %(levelname)s %(message)s" --log-date-format="%Y-%m-%d %H:%M:%S"
       
